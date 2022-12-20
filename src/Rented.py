@@ -1,7 +1,7 @@
-from AvailableForRent import AvailableRent
+from AvailableForRent import AvailableRentList
 from NodeTwo import NodeTypeTwo
 from datetime import datetime as dt
-class RentedList(AvailableRent):
+class RentedList(AvailableRentList):
     def __init__(self) -> None:
         super().__init__()
 

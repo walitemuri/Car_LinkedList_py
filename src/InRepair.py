@@ -1,3 +1,3 @@
-from AvailableForRent import AvailableRent
-class RepairList(AvailableRent):
+from AvailableForRent import AvailableRentList
+class RepairList(AvailableRentList):
     pass

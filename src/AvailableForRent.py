@@ -1,5 +1,7 @@
 from NodeOne import NodeTypeOne
-class AvailableRent:
+from NodeTwo import NodeTypeTwo
+from typing import Union
+class AvailableRentList:
     def __init__(self) -> None:
         self.head = None
     
@@ -53,7 +55,7 @@ class AvailableRent:
         
         return slow
     
-    def mergeSort(self, h) -> NodeTypeOne:
+    def __mergeSort(self, h) -> NodeTypeOne:
         if h is None or h.next is None:
             return h
 
@@ -61,14 +63,14 @@ class AvailableRent:
         next_to_mid = middle.next
 
         middle.next = None
-        left = self.mergeSort(h)
-        right = self.mergeSort(next_to_mid)
+        left = self.__mergeSort(h)
+        right = self.__mergeSort(next_to_mid)
 
         sorted_list = self.__sortedMerge(left, right)
         return sorted_list
     
     def sortList (self, head) -> NodeTypeOne:
-        new_head = self.mergeSort(head)
+        new_head = self.__mergeSort(head)
         return new_head
 
     def deleteNode (self, target) -> None:      
@@ -93,3 +95,13 @@ class AvailableRent:
             temp = temp.next.next
             prev.next = temp
         return
+
+    def searchTree (self, target) -> Union[NodeTypeOne, NodeTypeTwo]:
+        temp = self.head
+
+        while(temp is not None):
+            if(temp.plate is target):
+                return temp
+            temp = temp.next
+            
+        return None
