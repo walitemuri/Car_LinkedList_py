@@ -93,16 +93,3 @@ class AvailableRent:
             temp = temp.next.next
             prev.next = temp
         return
-
-    
-def main ():
-    newList = AvailableRent()
-    newList.insertNode("LADSA", 12313)
-    newList.insertNode("ADSAD", 23113)
-    newList.insertNode("Micran", 231)
-    newList.head = newList.sortList(newList.head)
-    newList.printList()
-    newList.deleteNode("Micran")
-    newList.printList()
-
-main()

@@ -1,7 +1,7 @@
 from Car import Car
 class NodeTypeTwo(Car):
     """
-    Class to represent a car within the Rented linked list, includes expected return date
+    Class to represent a Car Node within the Rented linked list, includes expected return date
 
     ...
 

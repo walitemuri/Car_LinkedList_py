@@ -1,7 +1,7 @@
 from Car import Car
 class NodeTypeOne(Car):
     """
-    Class to represent the car within the Available For Rent linked list and the Cars In Repair Linked List
+    Class to represent a Car Node within the Available For Rent linked list and the Cars In Repair Linked List
 
     ...
 
