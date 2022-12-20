@@ -1,4 +1,5 @@
-class NodeTypeTwo:
+from Car import Car
+class NodeTypeTwo(Car):
     """
     Class to represent a car within the Rented linked list, includes expected return date
 
@@ -20,8 +21,7 @@ class NodeTypeTwo:
     None
 
     """
-    def __init__(self, plate, mileage, expectedReturn) -> None:
-        self.plate = plate
-        self.mileage = mileage
-        self.expectedReturn = expectedReturn
+    def __init__(self, mileage, plate, expectedReturn) -> None:
+        super().__init__(mileage, plate)
         self.next = None
+        self.expectedReturn = expectedReturn

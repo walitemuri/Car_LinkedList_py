@@ -1,5 +1,5 @@
-
-class NodeTypeOne:
+from Car import Car
+class NodeTypeOne(Car):
     """
     Class to represent the car within the Available For Rent linked list and the Cars In Repair Linked List
 
@@ -20,26 +20,5 @@ class NodeTypeOne:
 
     """
     def __init__(self, mileage, plate) -> None:
-        self.mileage = mileage
-        self.plate = plate
+        super().__init__(mileage, plate)
         self.next = None
-
-
-
-class AvailableRent:
-    def __init__(self) -> None:
-        self.head = None
-    
-    def printList(self) -> None:
-        temp = self.head
-        while(temp):
-            print(temp.plate)
-            temp = temp.next
-
-
-class RentedList(AvailableRent):
-    pass
-
-class RepairList(AvailableRent):
-    pass
-
