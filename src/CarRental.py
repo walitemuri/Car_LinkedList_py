@@ -26,7 +26,6 @@ class CarRental:
     
     def addReturnedCarToRepairList(self, carPlate, mileage) -> None:
         is_valid_input = self.rentedList.searchTree(carPlate)
-        print(is_valid_input.plate)
 
         if is_valid_input is not None:
             self.rentedList.deleteNode(carPlate)

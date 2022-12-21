@@ -1,7 +1,7 @@
-from AvailableForRent import AvailableRentList
+from CarLinkedList.CarLinkedList import CarLinkedList
 from RentedCarNode import RentedCarNode
 from datetime import datetime as dt
-class RentedList(AvailableRentList):
+class RentedList(CarLinkedList):
     def __init__(self) -> None:
         super().__init__()
 
@@ -25,7 +25,7 @@ class RentedList(AvailableRentList):
         temp.next = new_node
         return
 
-    def deleteNode(self, target) -> None:
+    # def deleteNode(self, target) -> None:
         temp = self.head
 
         if (temp is None):

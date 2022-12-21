@@ -1,3 +1,3 @@
-from AvailableForRent import AvailableRentList
-class RepairList(AvailableRentList):
+from CarLinkedList.CarLinkedList import CarLinkedList
+class RepairList(CarLinkedList):
     pass
