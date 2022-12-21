@@ -1,5 +1,5 @@
-from NodeOne import NodeTypeOne
-from NodeTwo import NodeTypeTwo
+from InStoreCarNode import InStoreCarNode
+from RentedCarNode import RentedCarNode
 from typing import Union
 class AvailableRentList:
     def __init__(self) -> None:
@@ -11,7 +11,7 @@ class AvailableRentList:
             temp = temp.next
     
     def insertNode (self, plate, mileage) -> None:
-        new_node = NodeTypeOne(mileage, plate)
+        new_node = InStoreCarNode(mileage, plate)
         
         if self.head == None:
             self.head = new_node
@@ -24,7 +24,7 @@ class AvailableRentList:
         temp.next = new_node
         return
         
-    def __sortedMerge(self, a, b) -> NodeTypeOne:
+    def __sortedMerge(self, a, b) -> InStoreCarNode:
         result = None
 
         if a is None:
@@ -40,7 +40,7 @@ class AvailableRentList:
             result.next = self.__sortedMerge(a, b.next)
         return result
 
-    def __getMiddle (self, head) -> NodeTypeOne:
+    def __getMiddle (self, head) -> InStoreCarNode:
         if head is None:
             return head
         
@@ -54,7 +54,7 @@ class AvailableRentList:
         
         return slow
     
-    def __mergeSort(self, h) -> NodeTypeOne:
+    def __mergeSort(self, h) -> InStoreCarNode:
         if h is None or h.next is None:
             return h
 
@@ -68,7 +68,7 @@ class AvailableRentList:
         sorted_list = self.__sortedMerge(left, right)
         return sorted_list
     
-    def sortList (self, head) -> NodeTypeOne:
+    def sortList (self, head) -> InStoreCarNode:
         new_head = self.__mergeSort(head)
         return new_head
 
@@ -95,7 +95,7 @@ class AvailableRentList:
             prev.next = temp
         return
 
-    def searchTree (self, target) -> Union[NodeTypeOne, NodeTypeTwo]:
+    def searchTree (self, target) -> Union[InStoreCarNode, RentedCarNode]:
         temp = self.head
 
         while(temp is not None):
