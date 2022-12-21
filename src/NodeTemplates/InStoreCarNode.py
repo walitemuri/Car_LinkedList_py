@@ -13,11 +13,6 @@ class InStoreCarNode(Car):
         Represents the plate of the car
     next(node):
         The next car in the list
-
-    Methods
-    -------
-    None
-
     """
     def __init__(self, mileage, plate) -> None:
         super().__init__(mileage, plate)

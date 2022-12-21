@@ -2,6 +2,14 @@ from CarLinkedList.CarLinkedList import CarLinkedList
 from NodeTemplates.RentedCarNode import RentedCarNode
 from datetime import datetime as dt
 class RentedList(CarLinkedList):
+    """
+    Class Template for Rented Car Linked List
+    ...
+
+    Attributes
+    ----------
+    None
+    """
     def __init__(self) -> None:
         super().__init__()
 

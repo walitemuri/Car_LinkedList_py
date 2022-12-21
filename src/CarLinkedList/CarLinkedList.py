@@ -3,6 +3,17 @@ from NodeTemplates.RentedCarNode import RentedCarNode
 from typing import Union
 
 class CarLinkedList():
+    """
+    Class to represent a Linked List template for Car Type Nodes
+
+    ...
+
+    Attributes
+    ----------
+    head (Car Node):
+        The head node of the linked list
+    """
+
     def __init__(self) -> None:
         self.head = None
     

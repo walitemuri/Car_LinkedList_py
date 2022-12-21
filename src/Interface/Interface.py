@@ -1,5 +1,13 @@
 from datetime import datetime
 class Interface:
+    """
+    Class Template for Menu Interface with user
+    ...
+
+    Attributes
+    ----------
+    None
+    """
     def __init__(self) -> None:
         pass
 
