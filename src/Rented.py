@@ -24,25 +24,3 @@ class RentedList(CarLinkedList):
         new_node.next = temp.next
         temp.next = new_node
         return
-
-    # def deleteNode(self, target) -> None:
-        temp = self.head
-
-        if (temp is None):
-            print("Empty List")
-            return
-
-        if(temp.plate == target):
-            self.head = temp.next
-            return
-
-        while temp.plate is not target and temp is not None:
-            temp = temp.next
-        
-        if(temp is None):
-            return
-        else:
-            prev = temp
-            temp = temp.next.next
-            prev.next = temp
-        return

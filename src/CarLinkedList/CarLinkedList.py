@@ -81,9 +81,8 @@ class CarLinkedList():
             print("Empty List")
             return
 
-        if(temp.plate is target):
+        if(temp.plate == target):
             self.head = temp.next
-            temp = None
             return
 
         while temp.plate is not target and temp is not None:
