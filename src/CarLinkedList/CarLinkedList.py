@@ -1,5 +1,5 @@
-from InStoreCarNode import InStoreCarNode
-from RentedCarNode import RentedCarNode
+from NodeTemplates.InStoreCarNode import InStoreCarNode
+from NodeTemplates.RentedCarNode import RentedCarNode
 from typing import Union
 
 class CarLinkedList():

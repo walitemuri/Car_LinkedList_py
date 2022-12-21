@@ -1,5 +1,5 @@
 from CarLinkedList.CarLinkedList import CarLinkedList
-from RentedCarNode import RentedCarNode
+from NodeTemplates.RentedCarNode import RentedCarNode
 from datetime import datetime as dt
 class RentedList(CarLinkedList):
     def __init__(self) -> None:

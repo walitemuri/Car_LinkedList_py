@@ -1,7 +1,7 @@
-from AvailableForRent import AvailableRentList
-from Rented import RentedList
-from InRepair import RepairList
-from Interface import Interface
+from Lists.AvailableForRent import AvailableRentList
+from Lists.Rented import RentedList
+from Lists.InRepair import RepairList
+from Interface.Interface import Interface
 
 class CarRental:
     def __init__(self) -> None:

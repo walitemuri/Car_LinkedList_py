@@ -1,4 +1,4 @@
-from Car import Car
+from Car.Car import Car
 class InStoreCarNode(Car):
     """
     Class to represent a Car Node within the Available For Rent linked list and the Cars In Repair Linked List
