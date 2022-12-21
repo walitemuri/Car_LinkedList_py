@@ -4,7 +4,6 @@ from typing import Union
 class AvailableRentList:
     def __init__(self) -> None:
         self.head = None
-    
     def printList(self) -> None:
         temp = self.head
         while(temp):
@@ -85,7 +84,7 @@ class AvailableRentList:
             temp = None
             return
 
-        while temp.next.plate is not target and temp is not None:
+        while temp.plate is not target and temp is not None:
             temp = temp.next
         
         if(temp is None):
@@ -100,7 +99,7 @@ class AvailableRentList:
         temp = self.head
 
         while(temp is not None):
-            if(temp.plate is target):
+            if(temp.plate == target):
                 return temp
             temp = temp.next
             

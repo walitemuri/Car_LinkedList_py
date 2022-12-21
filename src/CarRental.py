@@ -10,6 +10,10 @@ class CarRental:
         self.repairList = RepairList()
         self.interface = Interface()
     
+    def addNewCarToAvRentList(self, carPlate, mileage):
+        self.avRentList.insertNode(carPlate, mileage)
+        return
+    
     def addReturnedCarToAvailableList(self, carPlate, mileage) -> None:
         is_valid_input = self.rentedList.searchTree(carPlate)
 
@@ -22,6 +26,7 @@ class CarRental:
     
     def addReturnedCarToRepairList(self, carPlate, mileage) -> None:
         is_valid_input = self.rentedList.searchTree(carPlate)
+        print(is_valid_input.plate)
 
         if is_valid_input is not None:
             self.rentedList.deleteNode(carPlate)
@@ -48,16 +53,49 @@ class CarRental:
         return
     
     def printAllLists(self) -> None:
-        print("Available for Rent List:")
-        print("---------------------------")
+        print("\nAvailable for Rent List:\n")
         self.avRentList.printList()
-        
-        print("Out for Rent List:")
         print("---------------------------")
+        
+        print("Out for Rent List:\n")
         self.rentedList.printList()
-        
-        print("In Repair List:")
         print("---------------------------")
+        
+        print("In Repair List:\n")
         self.repairList.printList()
+        print("---------------------------")
         return
 
+def main ():
+    CarRentalResolver = CarRental()
+    user_input = -1
+    while user_input != 7:
+        user_input = CarRentalResolver.interface.getInteger(CarRentalResolver.interface.printMenu())
+        
+        
+
+        if user_input == 1:
+            plate_input = CarRentalResolver.interface.getPlateInput()
+            miles_input = CarRentalResolver.interface.getMileInput()
+            CarRentalResolver.addNewCarToAvRentList(plate_input, miles_input)
+        elif user_input == 2:
+            plate_input = CarRentalResolver.interface.getPlateInput()
+            miles_input = CarRentalResolver.interface.getMileInput()
+            CarRentalResolver.addReturnedCarToAvailableList(plate_input, miles_input)
+        elif user_input == 3:
+            plate_input = CarRentalResolver.interface.getPlateInput()
+            miles_input = CarRentalResolver.interface.getMileInput()
+            CarRentalResolver.addReturnedCarToRepairList(plate_input, miles_input)
+        elif user_input == 4:
+            plate_input = CarRentalResolver.interface.getPlateInput()
+            CarRentalResolver.transferCarFromRepairToAvRentList(plate_input)
+        elif user_input == 5:
+            expectedReturn_input = CarRentalResolver.interface.getExpectedReturnDate()
+            CarRentalResolver.rentFirstAvailableCar(expectedReturn_input)
+        elif user_input == 6:
+            CarRentalResolver.printAllLists()
+        elif user_input == 7:
+            pass
+        else:
+            pass
+main()
