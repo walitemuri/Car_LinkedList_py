@@ -1,6 +1,5 @@
 from NodeTemplates.InStoreCarNode import InStoreCarNode
-from NodeTemplates.RentedCarNode import RentedCarNode
-from typing import Union
+from Car.Car import Car
 
 class CarLinkedList():
     """
@@ -107,7 +106,7 @@ class CarLinkedList():
             prev.next = temp
         return
 
-    def searchTree (self, target) -> Union[InStoreCarNode, RentedCarNode]:
+    def searchTree (self, target) -> Car:
         temp = self.head
 
         while(temp is not None):
