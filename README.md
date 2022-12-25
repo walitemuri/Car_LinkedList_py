@@ -1,6 +1,6 @@
 # Project Title
 
-Car Rental Simulation in Python
+Car Rental Simulation in Python (Object Oriented Design)
 
 ## Description
 
