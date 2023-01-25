@@ -31,7 +31,6 @@ Contact: walitemuri@gmail.com
 ### Dependencies
 
 * GCC Compiler
-* Ubuntu, MacOS
 
 ### Executing program 
 ```
